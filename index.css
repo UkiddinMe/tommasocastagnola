@@ -1,0 +1,200 @@
+
+/* UTILITY*/
+:root {
+    --paint-pink: #b83dba;
+    font-family: "DM Serif Display";
+}
+.hidden {
+    display: none;
+}
+.invisible {
+    opacity: 0;
+}
+.clickable {
+    cursor: pointer;
+}
+.moved-down {
+    transform: translate(0, 10px);
+}
+
+
+/* LAYOUT GENERALE */
+body {
+    margin: -17px;
+    width: 100vw;
+    height: 100vh;
+    background-color: lightgray;
+    background-image: image-set("assets\\back5.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    
+  background-position: 20% 0%;
+}
+#page {
+    color:whitesmoke;
+}
+#lang {
+    margin: 5px;
+    margin-right: 50px;
+    padding: 5px;
+    float: right;
+}
+#flag {
+    position:fixed;
+    margin: 20px;
+    height: 12px;
+    transition: opacity 0.4s;
+}
+#signature-cont {
+    float: right;
+}
+#signature {
+    font-size: small;
+    font-weight: 50;
+    color: whitesmoke;
+    margin-right: 8px;
+}
+.brand {
+    font-weight:800;
+}
+@media only screen and (min-width: 1000px) {
+    #column-container {
+        padding: 0 120px 0 120px;
+        
+        margin-left: 17px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    #column-container {
+        margin-left: 17px;
+    }
+}
+@media only screen and (min-width: 600px) and (max-width: 1000px) {
+    #column-container {        
+        margin-left: 17px;
+        padding-left: calc(100vw * 0.18 - 67.6051px);
+        padding-right: calc(100vw * 0.18 - 67.6051px);
+    }
+}
+
+
+/* TITOLO */
+#title-section {
+    height: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+#title-block {
+    height: 400px;
+    width: 600px;
+    text-align: center;
+    position: relative;
+}
+#title {
+    color: var(--paint-pink);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-20%, -50%);
+    font-size: 58px;
+}
+#sub-tit {
+    padding-top: 150px;
+    font-size: 23px;
+}
+
+
+/* SEZIONE DI SELEZIONE TABS */
+#navpane {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+.tab-background {
+    flex-grow: 4
+}
+.tab-front {
+    margin: 5px;
+    background-color: darkblue;
+    border-color: darkblue;
+    padding: 5px;
+    padding-left: 10px;
+    border-radius: 5px;
+    border-width: 2px;
+    border-style: solid;
+    transition: border-color 1.2s;
+}
+.tab-front:hover {
+    border-color: var(--paint-pink);
+}
+
+
+
+/* FOGLIO E CONTENUTO */
+#sheet {
+    background-color:darkblue;
+    min-height: 460px;
+    margin-bottom: 100px;
+    position: relative;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.content {
+    transition: opacity 0.3s, transform 0.2s;
+    position: absolute;
+    width: 100%
+}
+.content p, .content h1 {
+    margin: 30px 30px 30px 30px;
+}
+.content h1 {
+    color: var(--paint-pink);
+}
+
+#my-github {
+    text-align:center;
+    margin-left: -5px;
+}
+#my-github p {
+    margin: 30px 30px 0 30px;
+}
+
+
+/* LINK GITHUB */
+.centered-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+#git-link {
+    height: 100px;
+    width: 100px;
+    position: relative;
+    text-align: center;
+}
+#git-pic {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 70px;
+    transition: height 1.2s;
+    position: absolute;
+}
+#git-pic:hover {
+    height: 90px;
+}
+
+
+
+#coffe {
+    margin-left:40px;
+    position: absolute;
+    bottom: 40px;
+}
+
+/* FOOTER */
