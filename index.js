@@ -1,6 +1,48 @@
 
 var visibleTab = "bio";
 
+function changeViewType() {
+    var ww = document.body.clientWidth;
+    var conts = document.getElementsByClassName("content");
+
+    if (ww < 1000) {
+
+        for (var i = 0; i < conts.length; i++) {
+            var el = conts[i];
+            if (el.id != visibleTab) {
+                el.classList.remove("hidden");
+                el.classList.remove("invisible");
+                el.classList.remove("moved-down");
+                // if (el.id == "my-github") {
+                //     el.classList.add("centered-flex");
+                // }
+            } 
+        }
+
+    } else if (ww >= 1001) {
+        
+        for (var i = 0; i < conts.length; i++) {
+            var el = conts[i];
+            if (el.id != visibleTab) {
+                el.classList.add("hidden");
+                el.classList.add("invisible");
+                el.classList.add("moved-down");
+                // if (el.id == "my-github") {
+                //     el.classList.remove("centered-flex");
+                // }
+            } 
+        }
+
+    };
+};
+
+document.addEventListener('DOMContentLoaded', changeViewType, false);
+
+window.addEventListener('resize', function(event){
+    changeViewType();
+});
+
+
 function showContent(sheet) {
 
     if (sheet == visibleTab) {
@@ -23,10 +65,10 @@ function hide(el, callback) {
     setTimeout(function () {    
         el.classList.add("hidden");
         el.classList.add("moved-down");
-        if (el.id == "my-github")
-        {
-            el.classList.remove("centered-flex");
-        }
+        // if (el.id == "my-github")
+        // {
+        //     el.classList.remove("centered-flex");
+        // }
         
         if (callback != undefined) {
             callback(show);
@@ -37,10 +79,10 @@ function hide(el, callback) {
 
 function show(el) {
 
-    if (el.id == "my-github")
-    {
-        el.classList.add("centered-flex");
-    }
+    // if (el.id == "my-github")
+    // {
+    //     el.classList.add("centered-flex");
+    // }
 
     el.classList.remove("hidden");
     setTimeout(function () {

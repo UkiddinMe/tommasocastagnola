@@ -11,17 +11,14 @@
 </head>
 
 <body>
-    <div id="lang" onclick="changeLang()">
-        <img id="flag" class="clickable" src="assets/USA.png" />
+    <div id="lang">
+        <img id="flag" class="clickable" src="assets/USA.png" onclick="changeLang()"/>
     </div>
     <div id="column-container">
         <div id="title-section">
             <div id="title-block">
                 <div id="title">
                     Tommaso<br />Castagnola
-                </div>
-                <div id="sub-tit">
-
                 </div>
             </div>
         </div>
@@ -43,58 +40,62 @@
                     </div>
                 </div>
             </div>
-
             <div id="sheet">
-                <div id="bio" class="content">
-                    <h1 id="bio-tit" class="content-title">
-                        Un pirla, ma dalla massima professionalità
-                    </h1>
-                    <p id="bio-p-1">
-                        Di giorno<br />
-                        gestiscogestionali<br />
-                        per multinazionali,<br />
-                        di notte faccio le coccole al software e ai siti<br />
-                        per le tua attività / startup / progetti.
-                    </p>
-                    <p id="bio-p-2">
-                        Ho una laurea in filosofia dell'intelligenza artificiale,<br />
-                        sto prendendo una magistrale in etica del digitale.<br />
-                        Mi guadagno la pagnotta creando prodotti concreti,<br />
-                        ti offro preparazione umanistica e competenze tecniche.
-                    </p>
-                </div>
-                <div id="my-github" class="content hidden invisible moved-down">
-                    <h1 id="git-tit">My GitHub</h1>
-                    <a id="git-link" href="https://github.com/UkiddinMe" target="_blank">
-                        <img id="git-pic" class="clickable" src="assets/git.png" />
-                    </a>
-                    <p id="git-p-1">Qui trovi (solo alcuni de)i miei ludici progettini personali</p>
-                    <p id="git-p-2">Il 99% dei miei lavori, per la regione Emilia Romagna<br /> e per una multinazionale
-                        Olandese, non sono pubblici.</p>
-                </div>
-                <div id="contacts" class="content hidden invisible moved-down">
-                    <h1 id="cont-tit">Contacts</h1>
-                    <p id="cont-p-1">
-                        Nel caso tu abbia bisogno di un sito personale,<br />
-                        di un software gestionale della massima sicurezza,<br />
-                        o anche solo tu voglia farmi un saluto:<br />
-                    </p>
-                    <ul>
-                        <li>
-                            tommaso.castagnola@hotmail.com
-                        </li>
-                        <li>
-                            +39 3314338090
-                        </li>
-                    </ul>
-                    <p id="cont-p-2">
-                        Disponibile principalmente per aperitivi.
-                    </p>
+                <div id="content-sheet">
+                    <div id="bio" class="content absolute-content">
+                        <h1 id="bio-tit" class="content-title">
+                            Un pirla, ma dalla massima professionalità
+                        </h1>
+                        <p id="bio-p-1">
+                            Di giorno<br />
+                            gestiscogestionali<br />
+                            per multinazionali,<br />
+                            di notte faccio le coccole al software e ai siti<br />
+                            per le tua attività / startup / progetti.
+                        </p>
+                        <p id="bio-p-2">
+                            Ho una laurea in filosofia dell'intelligenza artificiale,<br />
+                            sto prendendo una magistrale in etica del digitale.<br />
+                            Mi guadagno la pagnotta creando prodotti concreti,<br />
+                            ti offro preparazione umanistica e competenze tecniche.
+                        </p>
+                    </div>
+                    <div id="my-github" class="content absolute-content">
+                        <h1 id="git-tit">My GitHub</h1>
+                        <a id="git-link" href="https://github.com/UkiddinMe" target="_blank">
+                            <div id="git-box">
+                                <img id="git-pic" class="clickable" src="assets/git.png" />
+                            </div>
+                        </a>
+                        <p id="git-p-1">Qui trovi (solo alcuni de)i miei ludici progettini personali</p>
+                        <p id="git-p-2">Il 99% dei miei lavori, per la regione Emilia Romagna<br /> e per una multinazionale
+                            Olandese, non sono pubblici.</p>
+                    </div>
+                    <div id="contacts" class="content">
+                        <h1 id="cont-tit">Contacts</h1>
+                        <p id="cont-p-1">
+                            Nel caso tu abbia bisogno di un sito personale,<br />
+                            di un software gestionale della massima sicurezza,<br />
+                            o anche solo tu voglia farmi un saluto:<br />
+                        </p>
+                        <ul>
+                            <li>
+                                tommaso.castagnola@hotmail.com
+                            </li>
+                            <li>
+                                +39 3314338090
+                            </li>
+                        </ul>
+                        <p id="cont-p-2">
+                            Disponibile principalmente per aperitivi.
+                        </p>
+                    </div>
                 </div>
                 <div id="coffe">
                     <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
                     <script
-                        type='text/javascript'>kofiwidget2.init(' Buy me a Coffee', '#29abe0', 'D1D1SCVKS'); kofiwidget2.draw();</script>
+                        type='text/javascript'>kofiwidget2.init(' Buy me a Coffee', '#29abe0', 'D1D1SCVKS'); kofiwidget2.draw();
+                    </script>
                 </div>
             </div>
         </div>

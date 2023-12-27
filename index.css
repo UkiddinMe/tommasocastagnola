@@ -27,21 +27,23 @@ body {
     background-image: image-set("assets\\back5.jpg");
     background-size:cover;
     background-repeat: no-repeat;
-    background-position: 20% 0%;
+    background-position: 15% 0%;
 }
 #page {
     color:whitesmoke;
+    min-height: 460px;
+    margin-bottom: 160px
 }
 #lang {
-    margin: 5px;
-    margin-right: 50px;
-    padding: 5px;
+    /* margin: 15px; */
+    margin-right: 100px;
+    padding: 15px;
     float: right;
 }
 #flag {
     position:fixed;
     margin: 20px;
-    height: 12px;
+    height: 60px;
     transition: opacity 0.4s;
 }
 #signature-cont {
@@ -78,16 +80,17 @@ body {
 }
 
 
+
 /* TITOLO */
 #title-section {
-    height: 600px;
+    height: 95vh;
     width: 100%;
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
 }
 #title-block {
-    height: 400px;
+    height: 100%;
     width: 600px;
     text-align: center;
     position: relative;
@@ -96,9 +99,9 @@ body {
     color: var(--paint-pink);
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 15%;
     transform: translate(-20%, -50%);
-    font-size: 58px;
+    font-size: 120px;
 }
 #sub-tit {
     padding-top: 150px;
@@ -106,12 +109,20 @@ body {
 }
 
 
+
 /* SEZIONE DI SELEZIONE TABS */
-#navpane {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: stretch;
+@media only screen and (max-width: 1000px) {
+    #navpane {
+        display: none;
+    }
+}
+@media only screen and (min-width: 1000px) {
+    #navpane {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: stretch;
+    }
 }
 .tab-background {
     flex-grow: 4
@@ -135,17 +146,33 @@ body {
 
 /* FOGLIO E CONTENUTO */
 #sheet {
-    background-color:darkblue;
     min-height: 460px;
-    margin-bottom: 100px;
+    background-color:darkblue;
+    display: flex;
+    flex-direction: column;
     position: relative;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
+#content-sheet {
+    min-height: 400px;
+    position: relative;
+    display: flex;
+    padding-bottom: 50px;
+}
+@media only screen and (min-width: 1000px) {
+    .content {
+        position: absolute;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    #content-sheet {
+        flex-direction: column;
+    }
+}
 .content {
     transition: opacity 0.3s, transform 0.2s;
-    position: absolute;
-    width: 100%
+    width: 100%;    
 }
 .content p, .content h1 {
     margin: 30px 30px 30px 30px;
@@ -163,16 +190,16 @@ body {
 }
 
 
+
 /* LINK GITHUB */
-.centered-flex {
+/* .centered-flex {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
-}
-#git-link {
-    height: 100px;
-    width: 100px;
+} */
+#git-box {
+    min-height: 100px;
+    min-width: 100px;
     position: relative;
     text-align: center;
 }
@@ -183,7 +210,6 @@ body {
     transform: translate(-50%, -50%);
     height: 70px;
     transition: height 1.2s;
-    position: absolute;
 }
 #git-pic:hover {
     height: 90px;
@@ -192,9 +218,12 @@ body {
 
 
 #coffe {
-    margin-left:40px;
-    position: absolute;
-    bottom: 40px;
+    margin: 0 0 40px 40px;
 }
+
+/* a.kofi-button {
+    height: 70px !important
+} */
+
 
 /* FOOTER */
