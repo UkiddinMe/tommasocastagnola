@@ -285,14 +285,11 @@ body {
 
 
 /* SIGNATURE */
-#TM {
-    font-weight: 100;
-    font-size: 0.5em
-}
+
 @media only screen and (max-width: 1000px) and (orientation: portrait) {
     #signature {
         color:black;
-        font-size: 1.5em
+        font-size: 1.1em
     }
 }
 @media only screen and (max-width: 1000px) and (orientation: landscape) {
