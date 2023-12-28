@@ -134,7 +134,7 @@ body {
     top: 50%;
     left: 15%;
     transform: translate(-20%, -50%);
-    font-size: 120px;
+    font-size: 600%;
     text-shadow: whitesmoke 1px 1px 4px;
 }
 #sub-tit {
