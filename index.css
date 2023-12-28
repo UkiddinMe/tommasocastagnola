@@ -2,6 +2,7 @@
 /* UTILITY*/
 :root {
     --paint-pink: #b83dba;
+    /* --paint-pink: rgb(237, 136, 215); */
     font-family: "DM Serif Display";
     --meas: calc(100vh / 1px);
 }
@@ -25,19 +26,18 @@ body {
     width: 100vw;
     height: 100vh;
     background-color: lightgray;
-    background-image: image-set("assets\\back5.jpg");
     background-repeat: no-repeat;
     background-position: 15% 0%;
 }
 @media only screen and (max-width: 1000px) {
     body {
-        background-image: image-set("assets\\back5.jpg");
+        background-image: image-set("assets\\grey5.jpg");
         background-size: 100%;
     }
 }
 @media only screen and (min-width: 1000px) {
     body {
-        background-image: image-set("assets\\back6.jpg");
+        background-image: image-set("assets\\grey6.jpg");
         background-size: cover;
     }
 }
@@ -135,6 +135,7 @@ body {
     left: 15%;
     transform: translate(-20%, -50%);
     font-size: 120px;
+    text-shadow: whitesmoke 1px 1px 4px;
 }
 #sub-tit {
     padding-top: 150px;
@@ -193,22 +194,34 @@ body {
     display: flex;
     padding-bottom: 50px;
 }
-@media only screen and (min-width: 1000px) {
-    .content {
-        position: absolute;
-    }
-}
-@media only screen and (max-width: 1000px) {
-    #content-sheet {
-        flex-direction: column;
-    }
-}
 .content {
     transition: opacity 0.3s, transform 0.2s;
     width: 100%;    
 }
-.content p, .content h1 {
-    margin: 30px 30px 30px 30px;
+@media only screen and (min-width: 1000px) {
+    .content {
+        position: absolute;
+    }
+    .content p, .content h1 {
+        margin: 30px 30px 30px 30px;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .content {
+        margin-bottom: 40px
+    }
+    #content-sheet {
+        flex-direction: column;
+        margin: 0 70px 0 70px; 
+    }
+}
+@media only screen and (max-width: 1000px) and (orientation: portrait) {
+    .content h1 {
+        font-size: 6em;
+    }
+    .content {
+        margin-bottom: 100px
+    }
 }
 .content h1 {
     color: var(--paint-pink);
@@ -255,6 +268,8 @@ body {
 
 
 
+
+/* BUY ME A COFFEE */
 #coffe {
     margin: 0 0 40px 40px;
 }
@@ -267,3 +282,21 @@ body {
     }
 }
 
+
+
+/* SIGNATURE */
+#TM {
+    font-weight: 100;
+    font-size: 0.5em
+}
+@media only screen and (max-width: 1000px) and (orientation: portrait) {
+    #signature {
+        color:black;
+        font-size: 1.5em
+    }
+}
+@media only screen and (max-width: 1000px) and (orientation: landscape) {
+    #signature {
+        text-shadow: black 1px 0 8px;
+    }
+}
