@@ -13,9 +13,6 @@ function changeViewType() {
                 el.classList.remove("hidden");
                 el.classList.remove("invisible");
                 el.classList.remove("moved-down");
-                // if (el.id == "my-github") {
-                //     el.classList.add("centered-flex");
-                // }
             } 
         }
 
@@ -27,9 +24,6 @@ function changeViewType() {
                 el.classList.add("hidden");
                 el.classList.add("invisible");
                 el.classList.add("moved-down");
-                // if (el.id == "my-github") {
-                //     el.classList.remove("centered-flex");
-                // }
             } 
         }
 
@@ -65,10 +59,6 @@ function hide(el, callback) {
     setTimeout(function () {    
         el.classList.add("hidden");
         el.classList.add("moved-down");
-        // if (el.id == "my-github")
-        // {
-        //     el.classList.remove("centered-flex");
-        // }
         
         if (callback != undefined) {
             callback(show);
@@ -78,11 +68,6 @@ function hide(el, callback) {
 }
 
 function show(el) {
-
-    // if (el.id == "my-github")
-    // {
-    //     el.classList.add("centered-flex");
-    // }
 
     el.classList.remove("hidden");
     setTimeout(function () {
@@ -96,9 +81,18 @@ var ita = 0;
 
 function changeLang() {
 
-    var visible = document.getElementById(visibleTab);
+    var ww = document.body.clientWidth;
 
-    hide(visible, translate);
+    if (ww > 1000) {
+        var visible = document.getElementById(visibleTab);
+        hide(visible, translate);
+    } else { //mobile
+        var conts = document.getElementsByClassName("content");
+        for (var i = 0; i < conts.length; i++) {
+            var el = conts[i];
+            hide(el, translate);
+        }
+    }
 
 }
 
@@ -109,7 +103,7 @@ function translate(callback) {
         //Bio section
         document.getElementById("bio-tit").innerHTML = "A dumbass, but a professional one";
         document.getElementById("bio-p-1").innerHTML = "By day<br/>I manage corporate software<br/>for multinationals,<br/>by night I cuddle the software and the websites<br/>for your hustles / startup / projects.";
-        document.getElementById("bio-p-2").innerHTML = "I got a degree in Philosophy of Artificial Intelligence,<br/>I am about to get another in Ethics of the Digital.<br/>I earn a living building actual products,<br/>I offer my humanistic preparation and my technical competencies.";
+        document.getElementById("bio-p-2").innerHTML = "I got a degree in Philosophy of Artificial Intelligence,<br/>I am about to get another in Digital Ethics.<br/>I earn a living building actual products,<br/>I offer my humanistic preparation and my technical competencies.";
 
         //Git section
         document.getElementById("git-p-1").innerHTML = "Here you can find (just a few of) my little personal projects.";
@@ -141,10 +135,23 @@ function translate(callback) {
     }
     
     ita = !ita;
+    
+    var ww = document.body.clientWidth;
+
+    if (ww > 1000) {
+        if (callback != undefined) {
+            var vis = document.getElementById(visibleTab);
+            callback(vis);
+        }
+    } else { //mobile
+        if (callback != undefined) {
+            var conts = document.getElementsByClassName("content");
+            for (var i = 0; i < conts.length; i++) {
+                var el = conts[i];
+                callback(el);
+            }
+        }
         
-    if (callback != undefined) {
-        var vis = document.getElementById(visibleTab);
-        callback(vis);
     }
 
 }
