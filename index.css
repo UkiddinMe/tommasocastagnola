@@ -247,6 +247,7 @@ body {
 }
 .content h1 {
     color: var(--paint-pink);
+    font-size: 2.5em
 }
 
 
