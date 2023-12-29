@@ -219,13 +219,16 @@ body {
     transition: opacity 0.3s, transform 0.2s;
     width: 100%;    
 }
+.content p, .content h1 {
+    margin: 30px 30px 30px 30px;
+}
 @media only screen and (min-width: 1000px) {
     .content {
         position: absolute;
     }
-    .content p, .content h1 {
+    /* .content p, .content h1 {
         margin: 30px 30px 30px 30px;
-    }
+    } */
 }
 @media only screen and (max-width: 1000px) {
     .content {
@@ -233,7 +236,7 @@ body {
     }
     #content-sheet {
         flex-direction: column;
-        margin: 0 70px 0 70px; 
+        /* margin: 0 70px 0 70px;  */
     }
     .content ul {
         overflow: hidden
@@ -261,7 +264,7 @@ body {
 
 
 /* LINK GITHUB */
-@media only screen and (max-width: 1000px) {
+/* @media only screen and (max-width: 1000px) {
     #git-box {
         min-height: 200px;
         min-width: 200px;
@@ -272,8 +275,10 @@ body {
         min-height: 150px;
         min-width: 150px;
     }
-}
+} */
 #git-box {
+    min-height: 100px;
+    min-width: 100px;
     position: relative;
     text-align: center;
 }
@@ -282,11 +287,13 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: calc(100% - 6vw);
+    /* height: calc(100% - 6vw); */
+    height: 70px;
     transition: height 1.2s;
 }
 #git-pic:hover {
-    height: calc(120% - 6vw);
+    /* height: calc(120% - 6vw); */
+    height: 90px;
 }
 
 
@@ -296,14 +303,14 @@ body {
 #coffe {
     margin: 0 0 40px 40px;
 }
-@media only screen and (max-width: 1000px) and (orientation: portrait) {
+/* @media only screen and (max-width: 1000px) and (orientation: portrait) {
     a.kofi-button {
         transform: scale(1.5)
     }
     #coffe {
         margin: 13% 13% 13% 13%;
     }
-}
+} */
 
 
 
@@ -312,7 +319,8 @@ body {
 @media only screen and (max-width: 1000px) and (orientation: portrait) {
     #signature {
         color:black;
-        font-size: 1.1em
+        font-size: 0.7em;
+        margin-right: -17px;
     }
 }
 @media only screen and (max-width: 1000px) and (orientation: landscape) {
