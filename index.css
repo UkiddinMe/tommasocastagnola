@@ -22,7 +22,7 @@
 
 /* LAYOUT GENERALE */
 body {
-    margin: -17px;
+    margin: 0 0 0 -17px;
     width: 100vw;
     height: 100vh;
     background-color: lightgray;
@@ -46,20 +46,24 @@ body {
     min-height: 460px;
     margin-bottom: 160px
 }
-@media only screen and (max-width: 1000px) and (orientation: landscape) {
-    #lang {
-        margin-right: 3.5% 
-    }
-    #flag {
-        height: 5%;
-    }
-}
 @media only screen and (max-width: 1000px) and (orientation: portrait) {
     #lang {
         margin-right: 8% 
     }
     #flag {
         height: 2.5%;
+        right: 1vh;
+        margin: 2vh;
+    }
+}
+@media only screen and (max-width: 1000px) and (orientation: landscape) {
+    #lang {
+        margin-right: 3.5% 
+    }
+    #flag {
+        height: 5%;
+        right: 3vh;
+        /* margin: 2vh; */
     }
 }
 @media only screen and (min-width: 1000px) {
@@ -68,15 +72,14 @@ body {
     }
     #flag {
         height: 3%;
+        margin: 3vh;
     }
 }
 #lang {
-    padding: 15px;
     float: right;
 }
 #flag {
     position:fixed;
-    margin: 20px;
     transition: opacity 0.4s;
     z-index: 100
 }
@@ -92,23 +95,26 @@ body {
 .brand {
     font-weight:800;
 }
+/* computer */
 @media only screen and (min-width: 1000px) {
     #column-container {
         padding: 0 120px 0 120px;
         margin-left: 17px;
     }
 }
-@media only screen and (max-width: 1000px) {
-    #column-container {
-        margin-left: 17px;
-        margin-right: -17px;
-    }
-}
+/* computer visione più stretta */
 @media only screen and (min-width: 1000px) and (max-width: 1400px) {
     #column-container {        
         margin-left: 17px;
         padding-left: calc(100vw * 0.18 - 67.6051px);
         padding-right: calc(100vw * 0.18 - 67.6051px);
+    }
+}
+/* cellulare */
+@media only screen and (max-width: 1000px) {
+    #column-container {
+        margin-left: 17px;
+        margin-right: -17px;
     }
 }
 
@@ -124,7 +130,7 @@ body {
 }
 #title-block {
     height: 100%;
-    width: 600px;
+    width: 80%;
     text-align: center;
     position: relative;
 }
@@ -134,8 +140,23 @@ body {
     top: 50%;
     left: 15%;
     transform: translate(-20%, -50%);
-    font-size: 600%;
+    max-width: 100%;
     text-shadow: whitesmoke 1px 1px 4px;
+}
+@media only screen and (min-width: 1000px) {
+    #title {
+        font-size: 15vh
+    }
+}
+@media only screen and (max-width: 1000px) and (orientation: landscape) {
+    #title {
+        font-size: 11vh
+    }
+}
+@media only screen and (max-width: 1000px) and (orientation: portrait) {
+    #title {
+        font-size: 8vh
+    }
 }
 #sub-tit {
     padding-top: 150px;
@@ -214,18 +235,20 @@ body {
         flex-direction: column;
         margin: 0 70px 0 70px; 
     }
-}
-@media only screen and (max-width: 1000px) and (orientation: portrait) {
-    .content h1 {
-        font-size: 6em;
+    .content ul {
+        overflow: hidden
     }
-    .content {
-        margin-bottom: 100px
+    .content h1 {
+        overflow: hidden
     }
 }
 .content h1 {
     color: var(--paint-pink);
 }
+
+
+
+
 
 #my-github {
     text-align:center;
